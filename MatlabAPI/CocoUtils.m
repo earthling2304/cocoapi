@@ -4,7 +4,7 @@ classdef CocoUtils
   % The following utility functions are defined:
   %  convertPascalGt    - Convert ground truth for PASCAL to COCO format.
   %  convertImageNetGt  - Convert ground truth for ImageNet to COCO format.
-  %  convertPascalDt    - Convert detections on PASCAL to COCO format.
+  %  convertPascalDt    - Convert detections on PASCAL to COCO forimat.
   %  convertImageNetDt  - Convert detections on ImageNet to COCO format.
   %  validateOnPascal   - Validate COCO eval code against PASCAL code.
   %  validateOnImageNet - Validate COCO eval code against ImageNet code.
@@ -320,7 +320,7 @@ classdef CocoUtils
     end
   end
   
-  methods( Static, Access=private )
+  methods( Static )
     function data = initData( catNms, n )
       % Helper for convert() functions: init annotations.
       m=length(catNms); ms=num2cell(1:m);
